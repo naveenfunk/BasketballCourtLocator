@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2aef7cf96edb12d4b0cd9edefc12281c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_2aef7cf96edb12d4b0cd9edefc12281c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_2aef7cf96edb12d4b0cd9edefc12281c = L.map(
+                "map_2aef7cf96edb12d4b0cd9edefc12281c",
+                {
+                    center: [-36.880665, 174.66434999999998],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_76c4cc19b482de24a215c35e2d17e101 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_76c4cc19b482de24a215c35e2d17e101.addTo(map_2aef7cf96edb12d4b0cd9edefc12281c);
+        
+    
+            var marker_616aee1868e360f4a1be8868f4e6406b = L.marker(
+                [-36.8921, 174.661],
+                {}
+            ).addTo(map_2aef7cf96edb12d4b0cd9edefc12281c);
+        
+    
+        var popup_560cd4495503008e6ddeeeba4b7caf39 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c64e4dd61d0a7632882c184c9808bb9b = $(`<div id="html_c64e4dd61d0a7632882c184c9808bb9b" style="width: 100.0%; height: 100.0%;">Akatea Park 22 Akatea Road, Glendene</div>`)[0];
+                popup_560cd4495503008e6ddeeeba4b7caf39.setContent(html_c64e4dd61d0a7632882c184c9808bb9b);
+            
+        
+
+        marker_616aee1868e360f4a1be8868f4e6406b.bindPopup(popup_560cd4495503008e6ddeeeba4b7caf39)
+        ;
+
+        
+    
+    
+            marker_616aee1868e360f4a1be8868f4e6406b.bindTooltip(
+                `<div>
+                     Akatea Park
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_79f6d61b296eff5c023c338a400eec03 = L.marker(
+                [-36.9746, 174.619],
+                {}
+            ).addTo(map_2aef7cf96edb12d4b0cd9edefc12281c);
+        
+    
+        var popup_81abc3cffe034603bbc5f791fec4c864 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d480356bf815e73d2066cce3a0d8ed83 = $(`<div id="html_d480356bf815e73d2066cce3a0d8ed83" style="width: 100.0%; height: 100.0%;">Armour Bay Reserve 2 Armour Road, Parau</div>`)[0];
+                popup_81abc3cffe034603bbc5f791fec4c864.setContent(html_d480356bf815e73d2066cce3a0d8ed83);
+            
+        
+
+        marker_79f6d61b296eff5c023c338a400eec03.bindPopup(popup_81abc3cffe034603bbc5f791fec4c864)
+        ;
+
+        
+    
+    
+            marker_79f6d61b296eff5c023c338a400eec03.bindTooltip(
+                `<div>
+                     Armour Bay Reserve
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d659814ecc216ee49355b43ef38c9dcd = L.marker(
+                [-36.8974, 174.696],
+                {}
+            ).addTo(map_2aef7cf96edb12d4b0cd9edefc12281c);
+        
+    
+        var popup_cdace006f865af60c32e4542080383de = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_27b9a8031a7b026b6144faef4ccf8fa4 = $(`<div id="html_27b9a8031a7b026b6144faef4ccf8fa4" style="width: 100.0%; height: 100.0%;">Avondale Central Reserve 1951-1955 Great North Road, Avondale</div>`)[0];
+                popup_cdace006f865af60c32e4542080383de.setContent(html_27b9a8031a7b026b6144faef4ccf8fa4);
+            
+        
+
+        marker_d659814ecc216ee49355b43ef38c9dcd.bindPopup(popup_cdace006f865af60c32e4542080383de)
+        ;
+
+        
+    
+    
+            marker_d659814ecc216ee49355b43ef38c9dcd.bindTooltip(
+                `<div>
+                     Avondale Central Reserve
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d005ef4b74746d7352c0de96b791114b = L.marker(
+                [-36.8969, 174.646],
+                {}
+            ).addTo(map_2aef7cf96edb12d4b0cd9edefc12281c);
+        
+    
+        var popup_2a66844421dc029e3d280b47a734d61d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4943a5ea45b1eb7a45957524d7a9f989 = $(`<div id="html_4943a5ea45b1eb7a45957524d7a9f989" style="width: 100.0%; height: 100.0%;">Awaroa Park 126 Awaroa Road, Sunnyvale</div>`)[0];
+                popup_2a66844421dc029e3d280b47a734d61d.setContent(html_4943a5ea45b1eb7a45957524d7a9f989);
+            
+        
+
+        marker_d005ef4b74746d7352c0de96b791114b.bindPopup(popup_2a66844421dc029e3d280b47a734d61d)
+        ;
+
+        
+    
+    
+            marker_d005ef4b74746d7352c0de96b791114b.bindTooltip(
+                `<div>
+                     Awaroa Park
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f07049e2e079a62a133f297cebcea3cd = L.marker(
+                [-36.9147, 174.689],
+                {}
+            ).addTo(map_2aef7cf96edb12d4b0cd9edefc12281c);
+        
+    
+        var popup_43eb25a2ba701b510aaa6398b842639a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3451b2ee06165ed026efb09e0eadaf7a = $(`<div id="html_3451b2ee06165ed026efb09e0eadaf7a" style="width: 100.0%; height: 100.0%;">Bob Hill Reserve 18 Hill Crescent, New Lynn</div>`)[0];
+                popup_43eb25a2ba701b510aaa6398b842639a.setContent(html_3451b2ee06165ed026efb09e0eadaf7a);
+            
+        
+
+        marker_f07049e2e079a62a133f297cebcea3cd.bindPopup(popup_43eb25a2ba701b510aaa6398b842639a)
+        ;
+
+        
+    
+    
+            marker_f07049e2e079a62a133f297cebcea3cd.bindTooltip(
+                `<div>
+                     Bob Hill Reserve
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2543bcc160377c3c8a0363a92dea93b8 = L.marker(
+                [-36.8204, 174.626],
+                {}
+            ).addTo(map_2aef7cf96edb12d4b0cd9edefc12281c);
+        
+    
+        var popup_13a047a6714503797731a623ed0cac13 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a975c058526e816a7926ebcd01372cf1 = $(`<div id="html_a975c058526e816a7926ebcd01372cf1" style="width: 100.0%; height: 100.0%;">Buckingham Common Buisson Glade, West Harbour</div>`)[0];
+                popup_13a047a6714503797731a623ed0cac13.setContent(html_a975c058526e816a7926ebcd01372cf1);
+            
+        
+
+        marker_2543bcc160377c3c8a0363a92dea93b8.bindPopup(popup_13a047a6714503797731a623ed0cac13)
+        ;
+
+        
+    
+    
+            marker_2543bcc160377c3c8a0363a92dea93b8.bindTooltip(
+                `<div>
+                     Buckingham Common
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5cfb4c9d707d2780d4b0a42cb43ffd3d = L.marker(
+                [-36.894, 174.689],
+                {}
+            ).addTo(map_2aef7cf96edb12d4b0cd9edefc12281c);
+        
+    
+        var popup_158c315bcb8584292ac8fb96d7e890cd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c23da9c0c4346949f408a32b9c1d1dce = $(`<div id="html_c23da9c0c4346949f408a32b9c1d1dce" style="width: 100.0%; height: 100.0%;">Canal Reserve 14-18 Canal Road, Avondale</div>`)[0];
+                popup_158c315bcb8584292ac8fb96d7e890cd.setContent(html_c23da9c0c4346949f408a32b9c1d1dce);
+            
+        
+
+        marker_5cfb4c9d707d2780d4b0a42cb43ffd3d.bindPopup(popup_158c315bcb8584292ac8fb96d7e890cd)
+        ;
+
+        
+    
+    
+            marker_5cfb4c9d707d2780d4b0a42cb43ffd3d.bindTooltip(
+                `<div>
+                     Canal Reserve
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_48120af996b747460d5b62cc42bf2f47 = L.marker(
+                [-36.8034, 174.641],
+                {}
+            ).addTo(map_2aef7cf96edb12d4b0cd9edefc12281c);
+        
+    
+        var popup_a0705777152fad19e83f01cd0f3aaad2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fd396a67b11e6f8037cb48b2e58d65ce = $(`<div id="html_fd396a67b11e6f8037cb48b2e58d65ce" style="width: 100.0%; height: 100.0%;">Connemara Reserve 38 Connemara Court, West Harbour</div>`)[0];
+                popup_a0705777152fad19e83f01cd0f3aaad2.setContent(html_fd396a67b11e6f8037cb48b2e58d65ce);
+            
+        
+
+        marker_48120af996b747460d5b62cc42bf2f47.bindPopup(popup_a0705777152fad19e83f01cd0f3aaad2)
+        ;
+
+        
+    
+    
+            marker_48120af996b747460d5b62cc42bf2f47.bindTooltip(
+                `<div>
+                     Connemara Reserve
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_55bddf84eb50f652a6197da1b6cdecfd = L.marker(
+                [-36.8989, 174.626],
+                {}
+            ).addTo(map_2aef7cf96edb12d4b0cd9edefc12281c);
+        
+    
+        var popup_5366877e826957d28e2bd1150e6f9926 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_20e3b78252bffb00a56d9b94746cc38a = $(`<div id="html_20e3b78252bffb00a56d9b94746cc38a" style="width: 100.0%; height: 100.0%;">Dalmatia Green 7 Chislehurst Street, Henderson</div>`)[0];
+                popup_5366877e826957d28e2bd1150e6f9926.setContent(html_20e3b78252bffb00a56d9b94746cc38a);
+            
+        
+
+        marker_55bddf84eb50f652a6197da1b6cdecfd.bindPopup(popup_5366877e826957d28e2bd1150e6f9926)
+        ;
+
+        
+    
+    
+            marker_55bddf84eb50f652a6197da1b6cdecfd.bindTooltip(
+                `<div>
+                     Dalmatia Green
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_21836178fa850e21ee815860b624c9e8 = L.marker(
+                [-36.999, 174.569],
+                {}
+            ).addTo(map_2aef7cf96edb12d4b0cd9edefc12281c);
+        
+    
+        var popup_5f06e18786d9dc294f61c242968bca9e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d3ed10b5db2db62b1c8be60db5969eae = $(`<div id="html_d3ed10b5db2db62b1c8be60db5969eae" style="width: 100.0%; height: 100.0%;">Huia Domain 1193 Huia Road, Huia</div>`)[0];
+                popup_5f06e18786d9dc294f61c242968bca9e.setContent(html_d3ed10b5db2db62b1c8be60db5969eae);
+            
+        
+
+        marker_21836178fa850e21ee815860b624c9e8.bindPopup(popup_5f06e18786d9dc294f61c242968bca9e)
+        ;
+
+        
+    
+    
+            marker_21836178fa850e21ee815860b624c9e8.bindTooltip(
+                `<div>
+                     Huia Domain
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4cafa0596a5d7aeb9c599dd673f56acd = L.marker(
+                [-36.8414, 174.654],
+                {}
+            ).addTo(map_2aef7cf96edb12d4b0cd9edefc12281c);
+        
+    
+        var popup_13efd1049a209c6e3b4ef0ae95e7b2c1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6d6ae08edb422f8d6c44e42b47824b4f = $(`<div id="html_6d6ae08edb422f8d6c44e42b47824b4f" style="width: 100.0%; height: 100.0%;">Jack Pringle Sports Park 5-13 Harbour View Road, Te Atatu Peninsula</div>`)[0];
+                popup_13efd1049a209c6e3b4ef0ae95e7b2c1.setContent(html_6d6ae08edb422f8d6c44e42b47824b4f);
+            
+        
+
+        marker_4cafa0596a5d7aeb9c599dd673f56acd.bindPopup(popup_13efd1049a209c6e3b4ef0ae95e7b2c1)
+        ;
+
+        
+    
+    
+            marker_4cafa0596a5d7aeb9c599dd673f56acd.bindTooltip(
+                `<div>
+                     Jack Pringle Sports Park
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_04e56ed378005bc60ad3e9e16fc9f0dc = L.marker(
+                [-36.9668, 174.641],
+                {}
+            ).addTo(map_2aef7cf96edb12d4b0cd9edefc12281c);
+        
+    
+        var popup_87c01887b9979749bd8bf7f7e6c774c3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b1b7537d6691608075633cf39543f1f3 = $(`<div id="html_b1b7537d6691608075633cf39543f1f3" style="width: 100.0%; height: 100.0%;">Ruatuna / Laingholm Reserve 4 Western Road, Laingholm</div>`)[0];
+                popup_87c01887b9979749bd8bf7f7e6c774c3.setContent(html_b1b7537d6691608075633cf39543f1f3);
+            
+        
+
+        marker_04e56ed378005bc60ad3e9e16fc9f0dc.bindPopup(popup_87c01887b9979749bd8bf7f7e6c774c3)
+        ;
+
+        
+    
+    
+            marker_04e56ed378005bc60ad3e9e16fc9f0dc.bindTooltip(
+                `<div>
+                     Ruatuna / Laingholm Reserve
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2cffb1c90cd64361ef088a07785fa73f = L.marker(
+                [-36.9174, 174.675],
+                {}
+            ).addTo(map_2aef7cf96edb12d4b0cd9edefc12281c);
+        
+    
+        var popup_1e7529c9cc94b54c216eb6f200f13427 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3146bc5a65a66702a02791345db59c18 = $(`<div id="html_3146bc5a65a66702a02791345db59c18" style="width: 100.0%; height: 100.0%;">Lawson Park 38 Willerton Avenue, New Lynn</div>`)[0];
+                popup_1e7529c9cc94b54c216eb6f200f13427.setContent(html_3146bc5a65a66702a02791345db59c18);
+            
+        
+
+        marker_2cffb1c90cd64361ef088a07785fa73f.bindPopup(popup_1e7529c9cc94b54c216eb6f200f13427)
+        ;
+
+        
+    
+    
+            marker_2cffb1c90cd64361ef088a07785fa73f.bindTooltip(
+                `<div>
+                     Lawson Park
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8280a938d7277e8a09ff9ca4170c2179 = L.marker(
+                [-36.8158, 174.643],
+                {}
+            ).addTo(map_2aef7cf96edb12d4b0cd9edefc12281c);
+        
+    
+        var popup_97727c42db00f17acdf5553c46293593 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_13629db5ca7717c4978b5ade665c44c6 = $(`<div id="html_13629db5ca7717c4978b5ade665c44c6" style="width: 100.0%; height: 100.0%;">Luckens Reserve 84 Marina View Drive, West Harbour</div>`)[0];
+                popup_97727c42db00f17acdf5553c46293593.setContent(html_13629db5ca7717c4978b5ade665c44c6);
+            
+        
+
+        marker_8280a938d7277e8a09ff9ca4170c2179.bindPopup(popup_97727c42db00f17acdf5553c46293593)
+        ;
+
+        
+    
+    
+            marker_8280a938d7277e8a09ff9ca4170c2179.bindTooltip(
+                `<div>
+                     Luckens Reserve
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b60fa500470071ad0b5735f118955630 = L.marker(
+                [-36.7774, 174.637],
+                {}
+            ).addTo(map_2aef7cf96edb12d4b0cd9edefc12281c);
+        
+    
+        var popup_6c1d5bd1dbf29b0b3fac0495e0546228 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_de89a5b95e98e7cddc20a511d3533059 = $(`<div id="html_de89a5b95e98e7cddc20a511d3533059" style="width: 100.0%; height: 100.0%;">Malcolm Hahn Memorial Reserve 41-43 Waimarie Road, Whenuapai</div>`)[0];
+                popup_6c1d5bd1dbf29b0b3fac0495e0546228.setContent(html_de89a5b95e98e7cddc20a511d3533059);
+            
+        
+
+        marker_b60fa500470071ad0b5735f118955630.bindPopup(popup_6c1d5bd1dbf29b0b3fac0495e0546228)
+        ;
+
+        
+    
+    
+            marker_b60fa500470071ad0b5735f118955630.bindTooltip(
+                `<div>
+                     Malcolm Hahn Memorial Reserve
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f8a3c9ad6c43fa4e3935ee0329d6a26b = L.marker(
+                [-36.8252, 174.622],
+                {}
+            ).addTo(map_2aef7cf96edb12d4b0cd9edefc12281c);
+        
+    
+        var popup_a3815c66fd67d635c3947cbf8046ff91 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c1982210e3870664b15fbdaee0574a4d = $(`<div id="html_c1982210e3870664b15fbdaee0574a4d" style="width: 100.0%; height: 100.0%;">Mānutewhau / Manutewhau Reserve 13 Jadewynn Drive, Massey</div>`)[0];
+                popup_a3815c66fd67d635c3947cbf8046ff91.setContent(html_c1982210e3870664b15fbdaee0574a4d);
+            
+        
+
+        marker_f8a3c9ad6c43fa4e3935ee0329d6a26b.bindPopup(popup_a3815c66fd67d635c3947cbf8046ff91)
+        ;
+
+        
+    
+    
+            marker_f8a3c9ad6c43fa4e3935ee0329d6a26b.bindTooltip(
+                `<div>
+                     Mānutewhau / Manutewhau Reserve
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7c4b6dec3f7858fe8045d3f9193015d0 = L.marker(
+                [-36.8797, 175.042],
+                {}
+            ).addTo(map_2aef7cf96edb12d4b0cd9edefc12281c);
+        
+    
+        var popup_dd013286c106f9c15742e82c2bdf8be4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_01456099eebc8bec99e3155e906079de = $(`<div id="html_01456099eebc8bec99e3155e906079de" style="width: 100.0%; height: 100.0%;">Maraetai Park 194 Maraetai Drive, Maraetai</div>`)[0];
+                popup_dd013286c106f9c15742e82c2bdf8be4.setContent(html_01456099eebc8bec99e3155e906079de);
+            
+        
+
+        marker_7c4b6dec3f7858fe8045d3f9193015d0.bindPopup(popup_dd013286c106f9c15742e82c2bdf8be4)
+        ;
+
+        
+    
+    
+            marker_7c4b6dec3f7858fe8045d3f9193015d0.bindTooltip(
+                `<div>
+                     Maraetai Park
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_11e47c51876872bdaa3fc6f79d2b0c42 = L.marker(
+                [-36.8998, 174.638],
+                {}
+            ).addTo(map_2aef7cf96edb12d4b0cd9edefc12281c);
+        
+    
+        var popup_25f3a8fe9ecf5c216c6ac2c30729a370 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_30c3bb08f58092d622df674db2636dab = $(`<div id="html_30c3bb08f58092d622df674db2636dab" style="width: 100.0%; height: 100.0%;">Ngawhere / McKinley Park 6 McKinley Road, Sunnyvale</div>`)[0];
+                popup_25f3a8fe9ecf5c216c6ac2c30729a370.setContent(html_30c3bb08f58092d622df674db2636dab);
+            
+        
+
+        marker_11e47c51876872bdaa3fc6f79d2b0c42.bindPopup(popup_25f3a8fe9ecf5c216c6ac2c30729a370)
+        ;
+
+        
+    
+    
+            marker_11e47c51876872bdaa3fc6f79d2b0c42.bindTooltip(
+                `<div>
+                     Ngawhere / McKinley Park
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_852b77859fb06279acff92f281dcca51 = L.marker(
+                [-36.8272, 174.631],
+                {}
+            ).addTo(map_2aef7cf96edb12d4b0cd9edefc12281c);
+        
+    
+        var popup_bca8d45b3fb29b0494dae2b3e4a96302 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7f7faa3a283cf5cea4cf75842913a690 = $(`<div id="html_7f7faa3a283cf5cea4cf75842913a690" style="width: 100.0%; height: 100.0%;">Moire Park 91-97 Moire Road, Massey</div>`)[0];
+                popup_bca8d45b3fb29b0494dae2b3e4a96302.setContent(html_7f7faa3a283cf5cea4cf75842913a690);
+            
+        
+
+        marker_852b77859fb06279acff92f281dcca51.bindPopup(popup_bca8d45b3fb29b0494dae2b3e4a96302)
+        ;
+
+        
+    
+    
+            marker_852b77859fb06279acff92f281dcca51.bindTooltip(
+                `<div>
+                     Moire Park
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5cbf4a8b468694f739cd15847d4dac66 = L.marker(
+                [-36.8712, 174.642],
+                {}
+            ).addTo(map_2aef7cf96edb12d4b0cd9edefc12281c);
+        
+    
+        var popup_1bf76655fe5d8c2a5cdfb19c2887e5d4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_76d6da2f15ac74160d761377a450dc4b = $(`<div id="html_76d6da2f15ac74160d761377a450dc4b" style="width: 100.0%; height: 100.0%;">Neville Power Memorial Park Kirrie Avenue, Te Atatu South</div>`)[0];
+                popup_1bf76655fe5d8c2a5cdfb19c2887e5d4.setContent(html_76d6da2f15ac74160d761377a450dc4b);
+            
+        
+
+        marker_5cbf4a8b468694f739cd15847d4dac66.bindPopup(popup_1bf76655fe5d8c2a5cdfb19c2887e5d4)
+        ;
+
+        
+    
+    
+            marker_5cbf4a8b468694f739cd15847d4dac66.bindTooltip(
+                `<div>
+                     Neville Power Memorial Park
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
