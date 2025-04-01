@@ -1,7 +1,7 @@
 import folium
 
 class LocationMapper:
-    def __init__(self, locations, map_center=None):
+    def __init__(self, locations, file_name, map_center=None):
         """
         Initialize map with location data
         
@@ -10,6 +10,7 @@ class LocationMapper:
         """
         
         self.locations = locations
+        self.file_name = file_name
         
 
         # If no center provided, use average of locations
@@ -38,11 +39,12 @@ class LocationMapper:
                 tooltip=location['title']
             ).add_to(self.map)
     
-    def save_map(self, filename='locations_map.html'):
+    def save_map(self):
         """
         Save map to HTML file
         
         :param filename: Output filename
         """
+        filename = f"{self.file_name}_map.html"
         self.map.save(filename)
         print(f"Map saved to {filename}")

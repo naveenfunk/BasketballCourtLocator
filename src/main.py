@@ -18,8 +18,8 @@ def main():
         data_collector = DataCollector()
         locations = []
         
-        for url in detail_urls:
-            location_data = data_collector.get_location_data(url)
+        for index, url in enumerate(detail_urls):
+            location_data = data_collector.get_location_data(url, index)
             if location_data:
                 locations.append(location_data)
         
@@ -28,7 +28,7 @@ def main():
         print("Starting to create map")
         # Create and save map
         if locations:
-            mapper = LocationMapper(locations)
+            mapper = LocationMapper(locations, BASE_URL.split("=")[-1])
             mapper.add_markers()
             mapper.save_map()
             print(f"Mapped {len(locations)} locations successfully!")

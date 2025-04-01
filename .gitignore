@@ -172,3 +172,7 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+West_map.html
+North_map.html
+locations_map.html
+All_map.html

@@ -41,25 +41,56 @@ class WebScraper:
         """
         try:
             self.driver.get(self.base_url)
-            
-            # Wait for list items to load (customize selector)
-            list_items = WebDriverWait(self.driver, 10).until(
-                EC.presence_of_all_elements_located((By.CSS_SELECTOR, "#resultToFocus"))
+
+            page_element = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_all_elements_located((By.XPATH, "//div[@id='listView']/div/div/p"))
             )
-                    
-            parks = list_items[0].find_elements(By.CSS_SELECTOR, "div.card.card-shadow")
-
-            # Extract detail page URLs
+            total_pages = int(page_element[0].text.split()[3])
+            current_page = int(page_element[0].text.split()[1])
             detail_urls = []
-            for park in parks:
-                try:
-                    detail_link = park.find_element(By.TAG_NAME, "a").get_attribute("href")
-                    detail_urls.append(detail_link)
-                except Exception:
-                    pass
 
-        
-            print(f"Detail URls found: {len(detail_urls)}")
+            print(f"Page: {current_page}/{total_pages}")
+            while current_page <= total_pages:
+                print(f"Scrape {current_page}")
+                list_items = WebDriverWait(self.driver, 10).until(
+                    EC.presence_of_all_elements_located((By.CSS_SELECTOR, "#resultToFocus"))
+                )
+
+                parks = list_items[0].find_elements(By.CSS_SELECTOR, "div.card.card-shadow")
+
+                # Extract detail page URLs
+                
+                for park in parks:
+                    try:
+                        detail_link = park.find_element(By.TAG_NAME, "a").get_attribute("href")
+                        detail_urls.append(detail_link)
+                    except Exception:
+                        pass
+            
+                print(f"Detail URls found: {len(detail_urls)}")
+
+                pagination_buttons = self.driver.find_elements(
+                    By.XPATH, "//div[@id='listView']/div/div/nav/ul/li"
+                )
+
+                if current_page == total_pages:
+                    break
+
+                page_index = 0
+                while page_index < len(pagination_buttons):
+                    if "page-item active" in pagination_buttons[page_index].get_attribute("class"):
+                        next_button = pagination_buttons[page_index+1]
+                        next_button_anchor = next_button.find_element(By.TAG_NAME, "a")
+                        print(f"Next button onclick :{next_button_anchor.get_attribute("id")}")
+                        self.driver.execute_script("arguments[0].click();", next_button_anchor)
+                
+                        WebDriverWait(self.driver, 10).until(
+                            EC.text_to_be_present_in_element((By.XPATH, "//div[@id='listView']/div/div/p/span"), f"Page {current_page+1} of {total_pages}")
+                        )
+                        print(f"Next page activated")
+                        break
+                    page_index += 1
+                current_page += 1
             return detail_urls
         
         except Exception as e:

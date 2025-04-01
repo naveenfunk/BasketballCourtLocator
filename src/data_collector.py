@@ -31,7 +31,7 @@ class DataCollector:
         driver = webdriver.Chrome(service=service, options=chrome_options)
         return driver
     
-    def get_location_data(self, detail_url):
+    def get_location_data(self, detail_url, index):
         """
         Fetch location data from a detail page
         
@@ -66,7 +66,7 @@ class DataCollector:
                 'latitude': float(latitude),
                 'longitude': float(longitude)
             }
-            print(f"Location extracted: {map_location}")
+            print(f"{index+1} Location extracted: {map_location}")
             return map_location
         
         except Exception as e:
