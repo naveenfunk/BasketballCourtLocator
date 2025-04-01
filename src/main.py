@@ -4,22 +4,22 @@ from src.mapper import LocationMapper
 
 def main():
     # Configuration (replace with your target website)
-    BASE_URL = "https://www.aucklandcouncil.govt.nz/parks-recreation/get-outdoors/ball-racquet-disc-activities/Pages/basketball.aspx?area=West"
+    BASE_URL = "https://www.aucklandcouncil.govt.nz/parks-recreation/get-outdoors/ball-racquet-disc-activities/Pages/basketball.aspx?area=All"
     
     try:
         # Initialize web scraper
         scraper = WebScraper(BASE_URL)
         
         # Get list of detail page URLs
-        detail_urls = scraper.get_list_items()
+        park_items = scraper.get_list_items()
         scraper.close()
         
         # Collect location data
         data_collector = DataCollector()
         locations = []
         
-        for index, url in enumerate(detail_urls):
-            location_data = data_collector.get_location_data(url, index)
+        for index, park_item in enumerate(park_items):
+            location_data = data_collector.get_location_data(park_item, index)
             if location_data:
                 locations.append(location_data)
         

@@ -47,7 +47,7 @@ class WebScraper:
             )
             total_pages = int(page_element[0].text.split()[3])
             current_page = int(page_element[0].text.split()[1])
-            detail_urls = []
+            park_items = []
 
             print(f"Page: {current_page}/{total_pages}")
             while current_page <= total_pages:
@@ -62,12 +62,15 @@ class WebScraper:
                 
                 for park in parks:
                     try:
-                        detail_link = park.find_element(By.TAG_NAME, "a").get_attribute("href")
-                        detail_urls.append(detail_link)
-                    except Exception:
+                        a_element = park.find_element(By.TAG_NAME, "a")
+                        detail_link = a_element.get_attribute("href")
+                        park_type = a_element.find_element(By.CSS_SELECTOR, "div > span").text.splitlines()[0]
+                        park_items.append({'link':detail_link, 'type': park_type})
+                    except Exception as e:
+                        print(e)
                         pass
             
-                print(f"Detail URls found: {len(detail_urls)}")
+                print(f"Detail URls found: {len(park_items)}")
 
                 pagination_buttons = self.driver.find_elements(
                     By.XPATH, "//div[@id='listView']/div/div/nav/ul/li"
@@ -91,7 +94,7 @@ class WebScraper:
                         break
                     page_index += 1
                 current_page += 1
-            return detail_urls
+            return park_items
         
         except Exception as e:
             print(f"Error scraping list items: {e}")

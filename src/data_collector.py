@@ -31,15 +31,15 @@ class DataCollector:
         driver = webdriver.Chrome(service=service, options=chrome_options)
         return driver
     
-    def get_location_data(self, detail_url, index):
+    def get_location_data(self, park_item, index):
         """
         Fetch location data from a detail page
         
-        :param detail_url: URL of the detail page
+        :param park_item: URL and Type of the park
         :return: Dictionary with location details
         """
         try:
-            self.driver.get(detail_url)
+            self.driver.get(park_item['link'])
             
             # Wait and extract title (customize selector)
             title = WebDriverWait(self.driver, 10).until(
@@ -62,7 +62,7 @@ class DataCollector:
             
             map_location = {
                 'title': title,
-                'address': address,
+                'address': f"{park_item['type']}-{address}",
                 'latitude': float(latitude),
                 'longitude': float(longitude)
             }
@@ -70,7 +70,7 @@ class DataCollector:
             return map_location
         
         except Exception as e:
-            print(f"Error collecting data from {detail_url}: {e}")
+            print(f"Error collecting data from {park_item}: {e}")
             return None
     
     def close(self):
